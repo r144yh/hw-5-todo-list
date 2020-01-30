@@ -9,29 +9,37 @@
 </head>
 <body>
 <div class="container" style="width: 400px; margin: auto;">
-    <header class="header">
+    <div class="main">
         <h1>Список дел</h1>
-    </header>
-    <main class="main">
-        <input type="text" id="elementToDo" placeholder="Добавить задачу">
+        <div class="addItemList">
+            <input type="text" id="elementToDo" placeholder="Добавить задачу">
+            <!--            <br>-->
+            <!--            <button onclick="dlFunction()" class="dropbtn">&#128197;</button>-->
+            <input type="date" id="deadlineDo">
+            <!--            <div id="myDropdown" class="dropdown-content">-->
+            <!--                <a href="#home">Home</a>-->
+            <!--                <a href="#about">About</a>-->
+            <!--                <a href="#contact">Contact</a>-->
+            <!--            </div>-->
+        </div>
         <ul id="toDoList" class="list"></ul>
-        <ul class="filter" id="js-filters">
-            <li><a href="#/all" class="button selected">All</a></li>
-            <li><a href="#/completed" class="button">Completed</a></li>
-            <li><a href="#/yesterday" class="button">Yesterday</a></li>
-            <li><a href="#/week" class="button">Week</a></li>
-        </ul>
-<!--        <div class="buttons">-->
-<!--            <button class="addTask">Do it</button>-->
-<!--            <button class="deleteTask">Don't do it</button>-->
-<!--            <button class="deadlineTask">Do it on time</button>-->
-<!--            <div class="filter">-->
-<!--                <button class="doNotDoTask">сделано/не сделано</button>-->
-<!--                <button class="deadline">deadline</button>-->
-<!--            </div>-->
-<!--        </div>-->
-    </main>
+        <!--        <ul class="filter" id="js-filters">-->
+        <!--            <li><a href="#/all" class="button selected">All</a></li>-->
+        <!--            <li><a href="#/completed" class="button">Completed</a></li>-->
+        <!--            <li><a href="#/yesterday" class="button">Yesterday</a></li>-->
+        <!--            <li><a href="#/week" class="button">Week</a></li>-->
+        <!--        </ul>-->
+        <!--        <div class="buttons">-->
+        <!--            <button class="addTask">Do it</button>-->
+        <!--            <button class="deleteTask">Don't do it</button>-->
+        <!--            <button class="deadlineTask">Do it on time</button>-->
+        <!--            <div class="filter">-->
+        <!--                <button class="doNotDoTask">сделано/не сделано</button>-->
+        <!--                <button class="deadline">deadline</button>-->
+        <!--            </div>-->
+        <!--        </div>-->
+    </div>
 </div>
-<script src="toDoList.js"></script>
 </body>
+<script src="toDoList.js"></script>
 </html>
