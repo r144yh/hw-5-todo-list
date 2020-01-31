@@ -4,6 +4,8 @@ var initToDo = (function () {
     var fullListButton = document.getElementById('fullListBtn');
     var completeFilterButton = document.getElementById('completeBtn');
     var unCompleteFilterButton = document.getElementById('unCompleteBtn');
+    var tomorrowFilterButton = document.getElementById('tomorrowBtn');
+    var nextWeekFilterButton = document.getElementById('nextWeekBtn');
 
     function fllLst() {
         var fullList = ul.querySelectorAll('li');
@@ -38,6 +40,21 @@ var initToDo = (function () {
                 el.style.display = "none";
             })
         });
+
+        tomorrowFilterButton.addEventListener('click', function () {
+            var deadList = ul.querySelectorAll('li.liDeadTime');
+            var today = new Date();
+            var tomorrow = new Date();
+            tomorrow.setDate(today.getDate() + 1);
+            tomorrow.setHours(0, 0, 0, 0);
+
+            deadList.forEach(function (el) {
+                if (deadList.getDate() !== tomorrow.getDate()) {
+                    el.style.display = "none";
+                    console.log(5)
+                }
+            })
+        });
     }
 
     function newItem() {
@@ -45,6 +62,7 @@ var initToDo = (function () {
         var deadlineTime = document.getElementById('deadlineDo').value;
 
         var li = document.createElement('li');
+        var deadSpan = document.createElement('span');
         var checkButton = document.createElement('INPUT');
         var removeButton = document.createElement('button');
 
@@ -54,9 +72,14 @@ var initToDo = (function () {
         li.classList.add('noCheckItem');
         li.id = 'noCheckItem';
 
+        deadSpan.className = 'deadTime';
+        deadSpan.appendChild(dateItem);
+        li.classList.toggle('liDeadTime');
+
         checkButton.setAttribute('type', 'checkbox');
-        removeButton.textContent = 'Don\'t do it \u2716';
-        removeButton.classList.add('removeItem');
+        removeButton.textContent = '\u2716';
+        removeButton.classList.add('Btn');
+        removeButton.id = 'removeItem';
 
         if (item.length === 0 || !item.trim()) {
             return alert('Add text and then click Enter');
@@ -88,6 +111,7 @@ var initToDo = (function () {
         });
     }
 
+
     return {
         init: function () {
             eventListener();
@@ -96,13 +120,3 @@ var initToDo = (function () {
 })();
 
 initToDo.init();
-
-
-//
-// function deadlineFilter(){
-//
-// }
-//
-// function checkedItem(){
-//
-// }

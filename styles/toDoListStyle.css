@@ -1,0 +1,99 @@
+:root {
+    font-size: 1em;
+    background-color: black;
+    background-image: radial-gradient(rgb(92,255,176), transparent 0.0625em);
+    background-size: 0.9375em 0.9375em;
+}
+
+.container {
+    width: 50em;
+    margin: auto;
+    padding: 0.625em;
+    border-radius: 0.625em;
+    background-color: rgb(92,255,176);
+}
+
+h1 {
+    margin-top: 1.25em;
+    text-align: center;
+    color: #000;
+    text-shadow: 0 0.125em #231C31;
+}
+
+h1:before {
+    content: '\26AB';
+    padding-right: 3.75em;
+}
+h1:after {
+    content: '\26AB';
+    padding-left: 3.75em;
+}
+#elementToDo {
+    width: 90%;
+    padding: 0.75em 1.25em;
+    margin: 0.5em 0.625em;
+    display: inline-block;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.25em;
+    box-sizing: border-box;
+}
+
+#deadlineDo {
+    width: 40%;
+    padding: 0.75em 1.25em;
+    margin: 0.5em 0.625em;
+    display: inline-block;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.25em;
+    box-sizing: border-box;
+}
+
+.list {
+    list-style-type: none;
+    margin-left: 0;
+    counter-reset: li;
+}
+
+.list li {
+    padding: 0.625em 0;
+    position: relative;
+    left: 0.75em;
+    margin-bottom: 0.75em;
+    padding-left: 1em;
+    background: #2b2e30;
+    color: rgb(92,255,176);
+}
+
+.list li:before {
+    padding: 0.625em 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1.5em;
+    width: 1.875em;
+    text-align: center;
+    font-weight: bold;
+    background: rgb(81, 85, 87);
+    border-bottom-left-radius: 70em;
+    border-top-left-radius: 70em;
+    content: '\2748';
+
+}
+
+.Btn{
+    margin: 0 0.625em;
+}
+
+#fullListBtn, #completeBtn, #unCompleteBtn, #tomorrowBtn, #nextWeekBtn{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 1em 2em;
+    text-decoration: none;
+    margin: 0.25em 0.125em;
+    cursor: pointer;
+}
+
+#removeItem {
+    margin: 0 1.25em;
+}
