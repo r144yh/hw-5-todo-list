@@ -1,16 +1,17 @@
 :root {
     font-size: 1em;
     background-color: black;
-    background-image: radial-gradient(rgb(92,255,176), transparent 0.0625em);
+    background-image: radial-gradient(rgb(92, 255, 176), transparent 0.0625em);
     background-size: 0.9375em 0.9375em;
+    font-family: 'Sigmar One', cursive;
 }
 
 .container {
-    width: 50em;
+    max-width: 50em;
     margin: auto;
     padding: 0.625em;
     border-radius: 0.625em;
-    background-color: rgb(92,255,176);
+    background-color: rgb(92, 255, 176);
 }
 
 h1 {
@@ -24,10 +25,12 @@ h1:before {
     content: '\26AB';
     padding-right: 3.75em;
 }
+
 h1:after {
     content: '\26AB';
     padding-left: 3.75em;
 }
+
 #elementToDo {
     width: 90%;
     padding: 0.75em 1.25em;
@@ -36,6 +39,7 @@ h1:after {
     border: 0.0625em solid #ccc;
     border-radius: 0.25em;
     box-sizing: border-box;
+    font-family: 'Sigmar One', cursive;
 }
 
 #deadlineDo {
@@ -46,6 +50,7 @@ h1:after {
     border: 0.0625em solid #ccc;
     border-radius: 0.25em;
     box-sizing: border-box;
+    font-family: 'Sigmar One', cursive;
 }
 
 .list {
@@ -61,7 +66,8 @@ h1:after {
     margin-bottom: 0.75em;
     padding-left: 1em;
     background: #2b2e30;
-    color: rgb(92,255,176);
+    color: rgb(92, 255, 176);
+    word-wrap: break-word;
 }
 
 .list li:before {
@@ -80,20 +86,69 @@ h1:after {
 
 }
 
-.Btn{
+#completeItem {
+    color: #ffbfca;
+}
+
+.Btn {
     margin: 0 0.625em;
 }
 
-#fullListBtn, #completeBtn, #unCompleteBtn, #tomorrowBtn, #nextWeekBtn{
-    background-color: #4CAF50;
+#fullListBtn, #completeBtn, #unCompleteBtn {
+    background: #8ce5b7;
     border: none;
-    color: white;
+    color: #495057;
     padding: 1em 2em;
     text-decoration: none;
     margin: 0.25em 0.125em;
     cursor: pointer;
+    transition-duration: 0.4s;
+    font-family: 'Sigmar One', cursive;
+}
+
+#clearBtn {
+    background: #71d0e5;
+    border: none;
+    color: #495057;
+    padding: 1em ;
+    text-decoration: none;
+    margin: 0.25em 8.1em;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    font-family: 'Sigmar One', cursive;
+}
+
+#fullListBtn:hover {
+    background-color: #ffbfca; /* Green */
+    color: white;
+}
+
+#completeBtn:hover {
+    background-color: #ffbfca; /* Green */
+    color: white;
+}
+
+#unCompleteBtn:hover {
+    background-color: #ffbfca; /* Green */
+    color: white;
+}
+
+#clearBtn:hover {
+    background-color: #ffbfca; /* Green */
+    color: white;
 }
 
 #removeItem {
-    margin: 0 1.25em;
+    margin: 0 2em;
+    transition-duration: 0.4s;
+    background: #8ce5b7;
+}
+
+#removeItem:hover {
+    background-color: #ffbfca; /* Green */
+    color: white;
+}
+
+.deadTime {
+    margin: 0 2em;
 }

@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/toDoListStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap" rel="stylesheet">
     <title>To-Do List</title>
 </head>
 <body>
 <div class="container">
     <div class="main">
-        <h1>TO-DO LIST</h1><hr>
+        <h1>TO-DO LIST</h1>
+        <div id="date" class="date">Do it, please</div>
+        <hr>
         <div class="addItemList">
             <input type="text" id="elementToDo" placeholder="Добавить задачу">
             <input type="date" id="deadlineDo">
@@ -19,9 +22,9 @@
             <button id="fullListBtn">Full List</button>
             <button id="completeBtn">Complete Item</button>
             <button id="unCompleteBtn">Active Item</button>
-            <button id="tomorrowBtn">Tomorrow Filter</button>
-            <button id="nextWeekBtn">Next Week Filter</button>
-        </div><hr>
+            <button id="clearBtn">Clear List</button>
+        </div>
+        <hr>
         <ul id="toDoList" class="list"></ul>
     </div>
 </div>
